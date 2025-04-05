@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+
+# Django specific
+*.db
+*.sqlite3
+media/
+staticfiles/
+local_settings.py
+
+# Environment
+.env
+venv/
+ENV/
+env/
+.venv/
+
+# VSCode
+.vscode/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Migrations (optional if you regenerate them)
+**/migrations/*.py
+**/migrations/__pycache__/
+
+# Coverage
+htmlcov/
+.coverage
+
+# Pytest
+.cache/
+
+# pip
+pip-log.txt
