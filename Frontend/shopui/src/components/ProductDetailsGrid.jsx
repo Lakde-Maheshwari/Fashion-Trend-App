@@ -2,13 +2,10 @@ const ProductDetailsGrid = ({ product }) => {
   // Return null or loading state if product is not available
   if (!product) {
     return <div className="p-4 text-center">Loading product details...</div>;
-    // Or return null to render nothing:
-    // return null;
   }
 
   return (
     <div className="grid grid-cols-2 gap-4 p-4">
-      {/* First Column */}
       <div className="space-y-4">
         {/* Fabric */}
         <div className="bg-white text-black p-6 rounded-lg flex items-center justify-between h-[200px]">
@@ -20,7 +17,6 @@ const ProductDetailsGrid = ({ product }) => {
           </div>
         </div>
 
-        {/* Rest of your component remains the same... */}
         {/* Sizes */}
         <div className="bg-white text-black p-6 rounded-lg flex items-center justify-between h-[200px]">
           <div className="font-[Arimo] text-[64px] font-bold leading-[50px] tracking-[0.06em]">
@@ -34,7 +30,6 @@ const ProductDetailsGrid = ({ product }) => {
 
       {/* Second Column */}
       <div className="space-y-4">
-        {/* Colors with image below */}
         <div>
           <div className="bg-white text-black p-6 rounded-lg flex items-center justify-between h-[200px]">
             <div className="font-[Arimo] text-[64px] font-bold leading-[50px] tracking-[0.06em]">
