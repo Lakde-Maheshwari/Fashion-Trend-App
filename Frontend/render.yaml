@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: django-backend
+    env: python
+    plan: free
+    region: oregon
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn mysite.wsgi:application"
+    workingDirectory: backend
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: mysite.settings
+      - key: PYTHON_VERSION
+        value: 3.10
