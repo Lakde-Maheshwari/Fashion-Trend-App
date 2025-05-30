@@ -3,7 +3,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-z^876g#io_!3_k!_iizuv)mqe$&$0o-e_s6n*t-zkiw-0$h7$l'
+SECRET_KEY = os.getenv('SECRET_KEY',)
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '').split(',')
 
