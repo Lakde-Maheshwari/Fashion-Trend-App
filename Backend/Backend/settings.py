@@ -2,16 +2,14 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv 
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load_dotenv()  
-
-
-BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 if not SECRET_KEY:
     raise Exception("SECRET_KEY not found. Did you forget to load your .env file?")
 
-DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '').split(',')
+DEBUG = os.getenv('DJANGO_DEBUG', 'False').lower == 'true'
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '').split(' ')
 
 
 INSTALLED_APPS = [
